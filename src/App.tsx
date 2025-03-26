@@ -1,7 +1,6 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Tasks from './components/tasks';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Tasks from "./components/tasks";
 
 const App = () => {
   return (
@@ -11,6 +10,6 @@ const App = () => {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

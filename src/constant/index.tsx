@@ -1,44 +1,54 @@
-import { ITask } from "../components/tasks";
+import { ITasks } from "../components/tasks";
 
-export const tasks: ITask[] = [
+export const tasks: ITasks[] = [
   {
     id: 1,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Counter",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 2,
-    title: "calculator",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Calculator",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 3,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Counter",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 4,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Calculator",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 5,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Counter",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 6,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Calculator",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 7,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Counter",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
   {
     id: 8,
-    title: "counter",
-    description: "count the value using a class component with increment and decrement, state methods,and updates the value using the setstate method.",
+    title: "Calculator",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
+  },
+  {
+    id: 9,
+    title: "Counter",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
+  },
+  {
+    id: 10,
+    title: "Calculator",
+    description: "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
   },
 ];

@@ -1,7 +1,6 @@
 import { tasks } from "../../constant";
-import React from "react";
 
-export interface ITask {
+export interface ITasks {
   id: number;
   title: string;
   description: string;
@@ -9,17 +8,18 @@ export interface ITask {
 
 const Tasks = () => {
   return (
-    <div className="homeContent container">
+    <div className="home-content container">
       {tasks.map((res) => {
         return (
           <div className="card">
-            <div>{res.id}</div>
-            {res.title}
-            <div className="cardContent">{res.description}</div>
+            <div className="card-heading">
+              <div>{res.id}</div>
+              <div>{res.title}</div>
+            </div>
+            <div className="card-description">{res.description}</div>
           </div>
-        )
-      }
-      )}
+        );
+      })}
     </div>
   );
 };
