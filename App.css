@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  }
+
+
+/*-------counter---------*/
+
+.counterButton{
+  margin: 25px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.counterContent {
+align-items: flex-start;
+}
+.counterLink {
+  text-align:start ;
+  color: black;
+  cursor: pointer;
+}
+.counter
+{
+  margin: 50px 200px;
+  padding: 50px;
+  justify-items: center;
+  font-size: 20px;
+  border-radius: 10px;
+   border: 1px solid black;
+  width: max-content;
+}
+
+span{
+  font-size: 24px;
+}
+
+
+
+/* ---------------Home Page------------*/
+  .container {
+        padding: 100px;
+  }
+  .homeContent {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+      }
+      .card {
+        width: 80%; 
+        padding:20px;
+       border: 1px solid black;
+       border-radius: 10px;
+       overflow: hidden;
+      }
+      .link{
+        text-decoration: none;
+        font-size: 24px;
+               
+      }
+      .cardContent {
+        margin-top: 10px;
+       font-size: 18px;
+        text-indent: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      
+      /*--------------Calculator-----------------------*/
+      .calculator {
+        justify-items: center ;
+        width: max-content;
+        background-color: black;
+        padding: 50px 20px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      .calcHead {
+        padding: 20px;
+        font-weight: 900;     
+           font-size: 24px;
+      }
+      .display {
+        width: 98%;
+        height: 50px;
+        background-color: lightblue;
+        font-size: 24px;
+    text-align: right;
+    border-radius: 5px;
+    margin-bottom: 10px;
+      }
+        
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .row {
+        display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+      }
+      .button {
+      
+  border-radius: 5px;
+  padding: 16px 26px;
+  text-align: center;
+  background-color: rgb(129, 126, 126);
+  color: white;
+  font-size: 14px;
+    
+      }
+      .button.clear {
+        background: red;
+      }
+      .button:active {
+        background: #777;
+      }
+    
