@@ -1,0 +1,66 @@
+@import "../../styles/color.scss";
+
+.backLink {
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px;
+  display: flex;
+  gap: 5px;
+  > svg {
+    height: 20px;
+    width: 20px;
+    fill: $black;
+  }
+}
+
+.container {
+  margin: min(5vw, 50px, 80px);
+  padding: 16px;
+  border: 1px solid $grey_100;
+  border-radius: 8px;
+  .title {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $black;
+  }
+  .description {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey;
+  }
+  .wrapper {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .countText {
+    font-size: 24px;
+    font-weight: 900;
+    color: $black;
+  }
+  .currentCount {
+    color: $grey;
+  }
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    > svg {
+      width: 40px;
+      height: 40px;
+      fill: $black;
+      padding: 10px;
+      border: 1px solid $grey_100;
+      border-radius: 4px;
+    }
+    .disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}
