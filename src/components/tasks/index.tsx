@@ -15,7 +15,7 @@ const Tasks = () => {
       <div className={styles.homeContent}>
         {tasks.map((res) => {
           return (
-            <Link to={`/task/${res.id}`}>
+            <Link to={`/task/${res.id}`} className={styles.cardLink}>
               <div className={styles.card}>
                 <div className={styles.cardHeading}>
                   <div>{res.id}</div>
