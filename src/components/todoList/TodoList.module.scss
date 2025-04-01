@@ -1,0 +1,98 @@
+@import "../../styles/color.scss";
+
+.backLink {
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px;
+  display: flex;
+  gap: 5px;
+  > svg {
+    height: 20px;
+    width: 20px;
+    fill: $black;
+  }
+}
+
+.container {
+  margin: min(5vw, 50px, 100px);
+  padding: 20px;
+  border: 1px solid $grey_100;
+  border-radius: 8px;
+  .title {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $black;
+  }
+  .description {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey;
+  }
+  .addTask {
+    margin-top: 20px;
+  }
+  .label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .inputField {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    outline: none;
+    margin-bottom: 20px;
+    & .inputData {
+      padding: 10px;
+      width: 100%;
+      text-transform: capitalize;
+      border: 1px solid $grey_100;
+      border-radius: 8px;
+    }
+  }
+  .addBtn {
+    align-items: end;
+    padding: 10px;
+    background-color: $black;
+    color: $white;
+    border: 1px solid $grey_100;
+    border-radius: 8px;
+    &.btnDisable {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  .taskId {
+    display: flex;
+    flex-direction: column;
+  }
+  .taskNum {
+    font-weight: 700;
+    color: $black;
+  }
+  .tasks {
+    color: $grey;
+    text-align: center;
+    font-size: 18px;
+  }
+  .taskData {
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey_100;
+    border-radius: 8px;
+    color: $black;
+    &.highlighted {
+      border: 1px solid $black;
+    }
+    > svg {
+      align-items: flex-end;
+    }
+  }
+}
