@@ -3,8 +3,12 @@ import Counter from "../counter";
 import Greeting from "../greeting";
 import FormHandling from "../formHandling";
 import TodoList from "../todoList";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import styles from "./TaskDetail.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const TaskDetail = () => {
+  const navigate = useNavigate();
   const params = useParams();
 
   const renderComponent = () => {
@@ -22,7 +26,15 @@ const TaskDetail = () => {
     }
   };
 
-  return <>{renderComponent()}</>;
+  return (
+    <div>
+      <div onClick={() => navigate("/")} className={styles.backLink}>
+        <KeyboardBackspaceOutlinedIcon />
+        <div> Back to Tasks</div>
+      </div>
+      {renderComponent()}
+    </div>
+  );
 };
 
 export default TaskDetail;
