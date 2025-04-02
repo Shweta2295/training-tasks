@@ -1,22 +1,21 @@
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./TodoList.module.scss";
 
 export interface ITodoList {
   id: number;
   name: string;
+  isCompleted: boolean;
 }
 
 const TodoList = () => {
-  const navigate = useNavigate();
   const [task, setTask] = useState<ITodoList[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [selectedTask, setSelectedTask] = useState<ITodoList | null>(null);
 
   const handleSubmit = () => {
+    if (!inputValue.trim()) return;
     if (selectedTask) {
       const updateValue = task.map((val) => {
         if (selectedTask?.id === val?.id) {
@@ -27,7 +26,10 @@ const TodoList = () => {
       setTask(updateValue);
       setSelectedTask(null);
     } else {
-      setTask([...task, { id: Math.random(), name: inputValue }]);
+      setTask([
+        ...task,
+        { id: Math.random(), name: inputValue, isCompleted: false },
+      ]);
     }
     setInputValue("");
   };
@@ -45,12 +47,24 @@ const TodoList = () => {
     setTask(updateTasks);
   };
 
+  const handleComplete = (id: number) => {
+    const isDone = task.map((val) => {
+      if (id === val?.id) {
+        return { ...val, isCompleted: !val.isCompleted };
+      } else {
+        return val;
+      }
+    });
+    setTask(isDone);
+    // setTask(
+    //   task.map((val) =>
+    //     val.id === value ? { ...val, isCompleted: !val.isCompleted } : val
+    //   )
+    // )
+  };
+
   return (
     <div>
-      <div onClick={() => navigate("/")} className={styles.backLink}>
-        <KeyboardBackspaceOutlinedIcon />
-        <div> {`Back to Tasks`}</div>
-      </div>
       <div className={styles.container}>
         <div className={styles.title}>{`4. Todo List`}</div>
         <div className={styles.description}>
@@ -71,6 +85,7 @@ const TodoList = () => {
               className={`${styles.addBtn} ${
                 !inputValue ? styles.btnDisable : ""
               }`}
+              disabled={!inputValue}
               onClick={handleSubmit}
             >
               {selectedTask ? `Edit` : `Add`}
@@ -90,7 +105,22 @@ const TodoList = () => {
                     selectedTask?.id === val?.id ? styles.highlighted : ""
                   }`}
                 >
-                  {val.name}
+                  <div className={styles.checkBox}>
+                    <input
+                      type="checkbox"
+                      name="text"
+                      value={val.id}
+                      onChange={() => handleComplete(val.id)}
+                      checked={val.isCompleted}
+                    />
+                    <div
+                      className={`${styles.isDone} ${
+                        val.isCompleted ? styles.completed : ""
+                      }`}
+                    >
+                      {val.name}
+                    </div>
+                  </div>
                   <div>
                     <EditOutlinedIcon onClick={() => handleUpdate(val)} />
                     <DeleteForeverIcon onClick={() => handleDelete(index)} />
