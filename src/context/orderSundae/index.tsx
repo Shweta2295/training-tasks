@@ -42,15 +42,15 @@ const OrderProvider = ({ children }: any) => {
     return scoopSubTotal + toppingSubTotal;
   };
 
-    const value = {
+  const value = {
     scoopData,
     toppingData,
     setScoopData,
     setToppingData,
     calculateTotal,
     calculateGrandTotal,
-    };
-    
+  };
+
   return (
     <orderSundaeContent.Provider value={value}>
       {children}
