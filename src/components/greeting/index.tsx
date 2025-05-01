@@ -14,7 +14,8 @@ const GreetingName = ({ name = "Guest" }: IGreetingNameProps) => {
   );
 };
 
-const Greeting = () => {
+const Greeting = (props: any) => {
+  const { greetings } = props;
   const [name, setName] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
 
@@ -25,11 +26,10 @@ const Greeting = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>2.Greeting Component</div>
-      <div className={styles.description}>
-        Create a greeting component that takes a name as a prop and displays
-        personalized massage.
+      <div className={styles.title}>
+        {greetings.id}.{greetings.title}
       </div>
+      <div className={styles.description}>{greetings.description}</div>
       <GreetingName name={name || undefined} />
       <div className={styles.greeterInput}>
         <label className={styles.label}>Enter a name:</label>

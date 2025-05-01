@@ -1,0 +1,74 @@
+@import "../../../styles/color.scss";
+
+.container {
+  padding: 60px 0px;
+  display: flex;
+  justify-content: center;
+  .pageSection {
+    padding: 142px 253px;
+    border: 1px solid $grey;
+    border-radius: 24px;
+    background-color: $light_Grey;
+    .title {
+      font-size: 60px;
+      font-weight: 700;
+      padding-bottom: 18px;
+      text-align: center;
+    }
+    .heading {
+      font-size: 36px;
+      font-weight: 500;
+      padding-bottom: 18px;
+      text-align: center;
+    }
+    .contain {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .btn {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      .orderButton {
+        padding: 16px 36px;
+        border-radius: 20px;
+        border: none;
+        background-color: $brown;
+        color: $white;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding: 20px 0px;
+    .pageSection {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    .pageSection {
+      padding: 60px;
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    .pageSection {
+      padding: 100px 180px;
+    }
+  }
+}

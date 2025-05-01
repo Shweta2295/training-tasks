@@ -1,0 +1,213 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../../../styles/color.scss";
+
+.container {
+  padding: 50px 213px;
+}
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.itemTitle {
+  margin-top: 35px;
+  font-weight: 600;
+  font-size: 34px;
+}
+.itemTotal {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  > svg {
+    height: 22px;
+    width: 22px;
+  }
+}
+.itemList {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 128px;
+  :hover {
+    background-color: $light_Grey;
+  }
+  .productData {
+    padding: 21px;
+    border: 1px solid $grey_100;
+    border-radius: 62px;
+    align-items: center;
+    min-width: 250px;
+    max-width: 382px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .priceData {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .productName {
+    margin-top: 36px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .productPrice {
+    font-size: 20px;
+    font-weight: 600;
+    > svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    font-size: 20px;
+    > svg {
+      height: 42px;
+      width: 42px;
+      font-size: 12px;
+      border: 1px solid $grey_100;
+      border-radius: 12px;
+      background-color: $grey;
+      padding: 8px;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+  .quantity {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    gap: 10px;
+  }
+  .toppingPriceData {
+    margin-top: 40px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .checkBox {
+    height: 20px;
+    width: 20px;
+  }
+  .toppingName {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .toppingPrice {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    > svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+.totalLast {
+  margin-top: 40px;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  > svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+.error {
+  font-size: 16px;
+  color: $error;
+  display: flex;
+  justify-content: center;
+}
+.orderSundaeBtn {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+}
+.confirmBtn {
+  padding: 20px 30px;
+  border: 1px solid$brown;
+  border-radius: 8px;
+  color: $white;
+  background-color: $brown;
+  font-size: 18px;
+  font-weight: 600;
+}
+:hover.confirmBtn {
+  background-color: $grey_100;
+  color: $black;
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .container {
+    padding: 30px 20px;
+  }
+  .itemList {
+    gap: 50px;
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .container {
+    padding: 30px 20px;
+  }
+  .itemList {
+    gap: 50px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .container {
+    padding: 30px 80px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1330px) {
+  .container {
+    padding: 30px 50px;
+  }
+  .itemList {
+    gap: 20px;
+    .productData {
+      max-width: 294px;
+      padding: 15px;
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1694px) {
+  .container {
+    padding: 50px 100px;
+  }
+  .itemList {
+    gap: 50px;
+    .productData {
+      max-width: 336px;
+      padding: 15px;
+      img {
+        width: 80%;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}

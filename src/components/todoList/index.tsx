@@ -9,7 +9,8 @@ export interface ITodoList {
   isCompleted: boolean;
 }
 
-const TodoList = () => {
+const TodoList = (props: any) => {
+  const { listData } = props;
   const [task, setTask] = useState<ITodoList[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [selectedTask, setSelectedTask] = useState<ITodoList | null>(null);
@@ -66,10 +67,10 @@ const TodoList = () => {
   return (
     <div>
       <div className={styles.container}>
-        <div className={styles.title}>{`4. Todo List`}</div>
-        <div className={styles.description}>
-          {`Build a simple todo list where users can add and remove tasks using state and list rendering.`}
+        <div className={styles.title}>
+          {listData.id}.{listData.title}
         </div>
+        <div className={styles.description}>{listData.description}</div>
         <div className={styles.addTask}>
           <label className={styles.label}>{`Add a new task:`}</label>
           <div className={styles.inputField}>

@@ -1,0 +1,84 @@
+@import "../../../styles/color.scss";
+.container {
+  margin: 56px 153px;
+  .back {
+    display: flex;
+    gap: 8px;
+    color: $grey;
+    cursor: pointer;
+    .backContain {
+      font-size: 16px;
+      font-weight: 700;
+      color: $grey;
+    }
+  }
+  .summaryTitle {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .productDetail {
+    margin-top: 25px;
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+  }
+  .checkbox {
+    height: 28px;
+    width: 28px;
+  }
+  .ordersData {
+    ul {
+      margin-left: 15px;
+    }
+    li::marker {
+      color: $brown;
+    }
+    li {
+      padding-bottom: 20px;
+      margin-left: 36px;
+      color: $black;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .checker {
+    display: flex;
+    gap: 10px;
+    .errMsg {
+      font-size: 24px;
+      font-weight: 400;
+      color: $black;
+    }
+    &svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .errorHandle {
+    font-size: 12px;
+    color: $error;
+  }
+  .confirmButton {
+    padding: 26px 55px;
+    margin-top: 48px;
+    border: 1px solid $brown;
+    border-radius: 12px;
+    color: $white;
+    background-color: $brown;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  .container {
+    margin: 20px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 524px) {
+  .container {
+    margin: 30px;
+  }
+}

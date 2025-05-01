@@ -14,12 +14,14 @@ interface FormValues {
 
 const validationSchema = Yup.object({
   name: Yup.string()
+    .trim()
     .required("Please enter your name")
     .matches(/^([A-Za-z\s])+$/, "Name can only letters"),
   age: Yup.number()
     .required("Please enter your age")
     .typeError("Age must be a number"),
   email: Yup.string()
+    .trim()
     .required("Please enter your email")
     .email("Invalid email address"),
   password: Yup.string()
@@ -30,7 +32,8 @@ const validationSchema = Yup.object({
     ),
 });
 
-const FormHandling = () => {
+const FormHandling = (props: any) => {
+  const { formHandles } = props;
   const [submittedData, setSubmittedData] = useState<FormValues | null>(null);
   const [passwordShown, setPasswordShown] = useState<boolean>(true);
 
@@ -53,10 +56,11 @@ const FormHandling = () => {
   return (
     <div className={styles.container}>
       <div className={styles.taskDetails}>
-        <div className={styles.taskTitle}>{`3. Form Handling`}</div>
+        <div className={styles.taskTitle}>
+          {formHandles.id}. {formHandles.title}
+        </div>
         <div className={styles.taskDescription}>
-          {`Create a form with validation that stores and displays data on
-          submission.`}
+          {formHandles.descriptions}{" "}
         </div>
       </div>
       <form onSubmit={formik.handleSubmit} className={styles.form}>

@@ -8,7 +8,8 @@ export interface ICounter {
   count: number;
 }
 
-const Counter = () => {
+const Counter = (props: any) => {
+  const { taskDetails } = props;
   const [count, setCount] = useState(0);
 
   const decrement = () => {
@@ -18,11 +19,10 @@ const Counter = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>1.Counter App</div>
-      <div className={styles.description}>
-        Create a simple counter with increment,decrement and reset buttons using
-        useState.
+      <div className={styles.title}>
+        {taskDetails.id}.{taskDetails.title}
       </div>
+      <div className={styles.description}>{taskDetails.description}</div>
       <div className={styles.wrapper}>
         <div className={styles.countText}>{count}</div>
         <div className={styles.currentCount}>Current Count</div>
