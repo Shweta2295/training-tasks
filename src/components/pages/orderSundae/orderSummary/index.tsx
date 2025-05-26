@@ -3,7 +3,7 @@ import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import {
   IOrderSundayContent,
   orderSundaeContent,
-} from "../../../context/orderSundae";
+} from "../../../../context/orderSundae";
 import { useContext, useState } from "react";
 import CurrencyRupeeOutlinedIcon from "@mui/icons-material/CurrencyRupeeOutlined";
 

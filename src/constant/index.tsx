@@ -32,6 +32,12 @@ export const tasks: ITasks[] = [
     description:
       "creating mouth watering ice cream sundae's, scoops and serves with adding extra toppings.",
   },
+  {
+    id: 6,
+    title: "User To-Do List",
+    description:
+      "create a dynamic user todo list using use reducer hook and also make responsive UI",
+  },
 ];
 
 export const scoops: IOrder[] | [] = [

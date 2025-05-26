@@ -1,14 +1,15 @@
 import { useParams } from "react-router-dom";
-import Counter from "../counter";
-import Greeting from "../greeting";
-import FormHandling from "../formHandling";
-import TodoList from "../todoList";
+import Counter from "../pages/counter";
+import Greeting from "../pages/greeting";
+import FormHandling from "../pages/formHandling";
+import TodoList from "../pages/todoList";
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import styles from "./TaskDetail.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { tasks } from "../../constant";
-import OrderSunday from "../orderSundae";
+import OrderSunday from "../pages/orderSundae";
+import UserTodo from "../pages/userTodo";
 
 const TaskDetail = () => {
   const navigate = useNavigate();
@@ -42,6 +43,8 @@ const TaskDetail = () => {
         return <TodoList listData={fetchData} />;
       case 5:
         return <OrderSunday />;
+      case 6:
+        return <UserTodo />;
       default:
         return <div>{params.id}</div>;
     }

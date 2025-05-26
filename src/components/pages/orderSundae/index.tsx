@@ -1,5 +1,5 @@
 import { useState } from "react";
-import OrderProvider from "../../context/orderSundae";
+import OrderProvider from "../../../context/orderSundae";
 import ProductList from "./productListing";
 import OrderTotal from "./orderSummary";
 import ThankYouPage from "./thankYouPage";
@@ -10,7 +10,7 @@ const OrderSunday = () => {
   const RenderComponent = () => {
     switch (step) {
       case 1:
-        return <ProductList setStep={setStep}/>;
+        return <ProductList setStep={setStep} />;
       case 2:
         return <OrderTotal setStep={setStep} />;
       case 3:
@@ -20,9 +20,7 @@ const OrderSunday = () => {
 
   return (
     <OrderProvider>
-      <div>
-        {RenderComponent()}
-      </div>
+      <div>{RenderComponent()}</div>
     </OrderProvider>
   );
 };

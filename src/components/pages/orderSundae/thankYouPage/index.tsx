@@ -3,7 +3,7 @@ import { useContext } from "react";
 import {
   IOrderSundayContent,
   orderSundaeContent,
-} from "../../../context/orderSundae";
+} from "../../../../context/orderSundae";
 import styles from ".././thankYouPage/ThankYouPage.module.scss";
 
 const ThankYouPage = (props: any) => {
