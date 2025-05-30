@@ -1,0 +1,43 @@
+@import "../../../../styles/color.scss";
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: start;
+}
+.cartTitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+.cartTotal {
+  margin-top: 30px;
+  border-top: 1px solid $grey_100;
+  font-size: 16px;
+  .totals {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    span {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+.clearBtn {
+  text-transform: capitalize;
+  border: 1px solid$grey_100;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  background-color: $white;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.noCart {
+  margin-top: 20px;
+  color: $grey;
+  font-size: 16px;
+}

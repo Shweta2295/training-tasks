@@ -1,0 +1,90 @@
+@import "../../../styles/color.scss";
+
+.container1 {
+  margin: 30px 100px 0px 100px;
+  padding: 20px;
+  border: 1px solid $grey_100;
+  border-radius: 10px;
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $black;
+  }
+  .description {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    color: $grey;
+  }
+}
+.container2 {
+  margin: 25px 100px;
+  display: flex;
+  gap: 20px;
+  .productSection {
+    padding: 20px;
+    border: 1px solid $grey_100;
+    border-radius: 10px;
+    width: 70%;
+  }
+  .cartSection {
+    top: 0;
+    position: sticky;
+    width: 30%;
+    height: 10%;
+    padding: 25px 25px 10px 25px;
+    border: 1px solid $grey_100;
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .container1 {
+    margin: 20px 20px 0px 20px;
+  }
+
+  .container2 {
+    margin: 20px;
+    flex-direction: column;
+    .productSection {
+      width: 100%;
+    }
+    .cartSection {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .container1 {
+    margin: 20px 50px 0px 50px;
+  }
+
+  .container2 {
+    margin: 20px 50px;
+    flex-direction: column;
+    .productSection {
+      width: 100%;
+    }
+    .cartSection {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1024px) {
+  .container1 {
+    margin: 20px 40px;
+  }
+  .container2 {
+    margin: 20px 40px;
+
+    .productSection {
+      width: 60%;
+    }
+    .cartSection {
+      width: 40%;
+    }
+  }
+}

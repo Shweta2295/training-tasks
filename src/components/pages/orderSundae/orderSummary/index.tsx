@@ -8,7 +8,6 @@ import { useContext, useState } from "react";
 import CurrencyRupeeOutlinedIcon from "@mui/icons-material/CurrencyRupeeOutlined";
 
 const OrderTotal = (props: any) => {
-  console.log(",", OrderTotal);
   const { setStep } = props;
   const { scoopData, toppingData, calculateTotal, calculateGrandTotal } =
     useContext<IOrderSundayContent>(orderSundaeContent);

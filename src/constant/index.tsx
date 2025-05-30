@@ -1,5 +1,6 @@
 import { ITasks } from "../components/tasks";
 import { IOrder } from "../context/orderSundae";
+import { IProduct } from "../redux/shoppingCart/reducer";
 
 export const tasks: ITasks[] = [
   {
@@ -37,6 +38,12 @@ export const tasks: ITasks[] = [
     title: "User To-Do List",
     description:
       "create a dynamic user todo list using use reducer hook and also make responsive UI",
+  },
+  {
+    id: 7,
+    title: "Shopping Cart",
+    description:
+      "Practice product manage, calculated state, and complex interactions",
   },
 ];
 
@@ -106,5 +113,56 @@ export const toppings: IOrder[] = [
     name: "Strawberry",
     quantity: 0,
     price: 15,
+  },
+];
+
+export const products: IProduct[] = [
+  {
+    id: 1,
+    img: "/images/laptop.jpg",
+    name: "Laptop",
+    category: "electronics",
+    price: 50000,
+    quantity: 0,
+  },
+  {
+    id: 2,
+    img: "/images/Head phone.jpg",
+    name: "Headphones",
+    category: "electronics",
+    price: 2000,
+    quantity: 0,
+  },
+  {
+    id: 3,
+    img: "/images/laptop.jpg",
+    name: "coffee Mug",
+    category: "Home",
+    price: 200,
+    quantity: 0,
+  },
+  {
+    id: 4,
+    img: "/images/Head phone.jpg",
+    name: "T-shirt",
+    category: "clothing",
+    price: 1200,
+    quantity: 0,
+  },
+  {
+    id: 5,
+    img: "/images/laptop.jpg",
+    name: "Book",
+    category: "Books",
+    price: 400,
+    quantity: 0,
+  },
+  {
+    id: 6,
+    img: "/images/Head phone.jpg",
+    name: "Phone Case",
+    category: "Electronics",
+    price: 300,
+    quantity: 0,
   },
 ];

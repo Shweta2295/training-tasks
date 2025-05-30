@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { tasks } from "../../constant";
 import OrderSunday from "../pages/orderSundae";
 import UserTodo from "../pages/userTodo";
+import ShoppingCart from "../pages/shoppingCart";
 
 const TaskDetail = () => {
   const navigate = useNavigate();
@@ -21,11 +22,6 @@ const TaskDetail = () => {
     const findDetails = tasks.find((ele) => ele.id === Number(id));
     setFetchData(findDetails);
   };
-
-  // const abc = tasks.filter((e,i) => {
-  //   return {}
-  // })
-  // console.log("abc==", abc);
 
   useEffect(() => {
     if (id) getDetailsFunction(id);
@@ -45,6 +41,8 @@ const TaskDetail = () => {
         return <OrderSunday />;
       case 6:
         return <UserTodo />;
+      case 7:
+        return <ShoppingCart cartData={fetchData} />;
       default:
         return <div>{params.id}</div>;
     }
